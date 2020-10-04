@@ -24,7 +24,6 @@ function render(majors){
         })
         table.innerHTML = contentTable.join('');
     }
-    
 }
 render(majors);
 
@@ -48,11 +47,9 @@ $(document).ready(function(){
 
     // xóa chuyên ngành
 	$('.deleteMajor').on('click',function(e){
-        
         let tr = $(this).closest('tr');
         let selectID = tr[0].children[1].textContent;
-        let iArr;
-        majors.findIndex(function(item,index){
+        let iArr = majors.findIndex(function(item,index){
             return item.majorID === selectID;
         })
         majors.splice(iArr,1);
