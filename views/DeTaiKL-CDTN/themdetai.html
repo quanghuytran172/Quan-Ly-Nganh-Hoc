@@ -33,24 +33,24 @@
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ngành Học</a>
               <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                    <a href="themnganh.html">Thêm Ngành Học</a>
+                    <a href="../NganhHoc/themnganh.html">Thêm Ngành Học</a>
                 </li>
                 <li>
-                    <a href="danhsachnganh.html">Danh Sách Ngành</a>
+                    <a href="../NganhHoc/danhsachnganh.html">Danh Sách Ngành</a>
                 </li>
               </ul>
-            </li>
-            <li>
-              <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Đề tài KLTN - CĐTN</a>
-              <ul class="collapse list-unstyled" id="pageSubmenu2">
-                <li>
-                    <a href="../DeTaiKL-CDTN/themdetai.html">Thêm Đề Tài</a>
+              </li>
+              <li>
+                <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Đề tài KLTN - CĐTN</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu2">
+                  <li>
+                      <a href="themdetai.html">Thêm Đề Tài</a>
+                  </li>
+                  <li>
+                      <a href="danhsachdetai.html">Danh Sách Đề Tài</a>
+                  </li>
+                </ul>
                 </li>
-                <li>
-                    <a href="../DeTaiKL-CDTN/danhsachdetai.html">Danh Sách Đề Tài</a>
-                </li>
-              </ul>
-	          </li>
 	          <li>
               <a href="#">About</a>
 	          </li>
@@ -68,6 +68,7 @@
 
 	      </div>
     	</nav>
+        
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5">
 
@@ -99,42 +100,47 @@
             </div>
             </nav>
             <div>
-              <h4 class="text-center mb-3">Thêm ngành học</h4>
+              <h4 class="text-center mb-3">Thêm đề tài</h4>
             </div>
             <div class="row">
                 <form class="col-md-12 add-form">
+                  <div class="form-group">
+                    <label for="majorId">Mã số đề tài</label>
+                    <input type="text" class="form-control" id="majorId">
+                  </div>
+                  <div class="form-group">
+                    <label for="department">Mã ngành học</label>
+                    <input type="text" class="form-control" id="majorId">
+                  </div>
+                  <div class="form-group">
+                    <label for="majorId">Tên đề tài</label>
+                    <input type="text" class="form-control" id="majorId">
+                  </div>
+                  <div class="form-group">
+                    <label for="department">Mô tả chi tiết đề tài</label>
+                    <input type="text" class="form-control" id="majorId">
+                  </div>
+
                   <div class="form-row">
-                    <div class="form-group col-md-2">
-                        <label for="majorId">Mã ngành</label>
-                        <input type="text" class="form-control" id="majorId">
+                    <div class="form-group col-md-3">
+                      <label for="department">Thời gian ước lượng thực hiện</label>
+                      <input type="text" class="form-control" id="majorId">
                     </div>
-                    <div class="form-group col-md-10">
-                        <label for="department">Khoa quản lý</label>
-                        <select id="department" class="form-control">
-                          <option selected>Choose...</option>
-                          <option>Toán - Tin</option>
-                          <option>Kinh tế - Quản lý</option>
-                          <option>Ngoại ngữ</option>
-                          <option>Khoa học sức khỏe</option>
-                          <option>Khoa học xã hội và nhân văn</option>
-                          <option>Du lịch</option>
-                          <option>Âm nhạc ứng dụng</option>
-                        </select>
+                    <div class="form-group col-md-3">
+                      <label for="department">Số sinh viên tối đa cùng làm</label>
+                      <input type="text" class="form-control" id="majorId">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="department">Từ khóa</label>
+                      <input type="text" class="form-control" id="majorId">
                     </div>
                   </div>
                     
-                    <div class="form-group ">
-                        <label for="vi-name">Tên tiếng Việt</label>
-                        <input type="text" class="form-control" id="vi-name">
-                      </div>
-                    <div class="form-group">
-                      <label for="en-name">Tên tiếng Anh</label>
-                      <input type="text" class="form-control" id="en-name" >
-                    </div>
+                  
 
-                    <button type="button" class="btn btn-success">Lưu</button>
-                    <a href="danhsachnganh.html" class="btn btn-secondary">Quay lại</a>
-                  </form>
+                  <button type="button" class="btn btn-success">Lưu</button>
+                  <a href="danhsachdetai.html" class="btn btn-secondary">Quay lại</a>
+                </form>
             </div>
 
             </div>
@@ -143,7 +149,7 @@
     <script src="../../js/Bootstrap&Jquery/jquery.min.js"></script>
     <script src="../../js/Bootstrap&Jquery/popper.js"></script>
     <script src="../../js/Bootstrap&Jquery/bootstrap.min.js"></script>
-    <script src="../../js/Major/addMajor.js"></script>
+    <script src="../../js/G-Topic/addTopic.js"></script>
 
   </body>
 </html>

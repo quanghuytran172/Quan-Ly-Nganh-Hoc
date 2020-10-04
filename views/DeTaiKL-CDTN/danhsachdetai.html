@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/e9a6ecd83d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/style.css">
-    
-    
-    
+
   </head>
   <body>
 		
@@ -33,24 +31,24 @@
               <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ngành Học</a>
               <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li>
-                    <a href="themnganh.html">Thêm Ngành Học</a>
+                    <a href="../NganhHoc/themnganh.html">Thêm Ngành Học</a>
                 </li>
                 <li>
-                    <a href="danhsachnganh.html">Danh Sách Ngành</a>
+                    <a href="../NganhHoc/danhsachnganh.html">Danh Sách Ngành</a>
                 </li>
               </ul>
-            </li>
-            <li>
-              <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Đề tài KLTN - CĐTN</a>
-              <ul class="collapse list-unstyled" id="pageSubmenu2">
-                <li>
-                    <a href="../DeTaiKL-CDTN/themdetai.html">Thêm Đề Tài</a>
+              </li>
+              <li>
+                <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Đề tài KLTN - CĐTN</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu2">
+                  <li>
+                      <a href="themdetai.html">Thêm Đề Tài</a>
+                  </li>
+                  <li>
+                      <a href="danhsachdetai.html">Danh Sách Đề Tài</a>
+                  </li>
+                </ul>
                 </li>
-                <li>
-                    <a href="../DeTaiKL-CDTN/danhsachdetai.html">Danh Sách Đề Tài</a>
-                </li>
-              </ul>
-	          </li>
 	          <li>
               <a href="#">About</a>
 	          </li>
@@ -99,10 +97,22 @@
                 </div>
             </div>
             </nav>
-            <h4 class="text-center mb-3">Danh sách các ngành</h4>
-            <p class="text-right">
-              <a href="themnganh.html" type="button" class="btn btn-success">Thêm ngành</a>
-            </p>
+            <h4 class="text-center mb-3">Danh sách đề tài</h4>
+            
+            <div class="row mb-3">
+              <div class="input-group md-form form-sm form-2 pl-0 col-md-5 ml-auto">
+                <input class="form-control my-0 py-1 lime-border" type="text" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                  <span class="input-group-text lime lighten-2" id="basic-text1"><i class="fas fa-search text-grey"
+                      aria-hidden="true"></i></span>
+                </div>
+                <div>
+                  <a href="themnganh.html" type="button" class="btn btn-success">Thêm đề tài</a>
+                </div>
+              </div>
+            </div>
+           
+            
             
             <div class="row">
                 
@@ -117,13 +127,13 @@
                             
                         <table id="mytable" class="table table-bordred table-striped">
                                <thead>
-                               
-                                <th>STT</th>
+                                <th>Mã số đề tài</th>
                                 <th>Mã ngành</th>
-                                <th>Tên tiếng Việt</th>
-                                <th>Tên tiếng Anh</th>
-                                <th>Khoa quản lý</th>
-                                <th>Ngày mở ngành</th>
+                                <th>Tên đề tài</th>
+                                <th>Mô tả chi tiết đề tài</th>
+                                <th>Thời gian ước lượng thực hiện</th>
+                                <th>Số sinh viên tối đa cùng làm</th>
+                                <th>Từ khóa</th>
                                 <th>Chỉnh sửa</th>
                                 <th>Xóa</th>
                                </thead>
@@ -138,6 +148,7 @@
             </div>
             
         </div>
+        
         <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
           <div class="modal-dialog">
         <div class="modal-content">
@@ -178,11 +189,11 @@
         <!-- /.modal-content --> 
       </div>
           <!-- /.modal-dialog --> 
-      </div>
-      </div>
+        </div>
+    </div>
     <script src="../../js/Bootstrap&Jquery/jquery.min.js"></script>
     <script src="../../js/Bootstrap&Jquery/popper.js"></script>
     <script src="../../js/Bootstrap&Jquery/bootstrap.min.js"></script>
-    <script src="../../js/mainIndex.js"></script>
+    <script src="../../js/G-Topic/mainTopic.js"></script>
   </body>
 </html>
