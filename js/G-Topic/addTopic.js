@@ -1,4 +1,4 @@
-let storageKey = 'majorsData';
+let storageKey = 'topicData';
 function getData(storageKey){
     let data = JSON.parse(localStorage.getItem(storageKey));
     return data;
@@ -21,29 +21,33 @@ $(document).ready(function(){
 
     // Thêm ngành học
     $('.add-form button[type="button"]').on('click',function(){
+        let topicId = $('#topicId').val();
         let majorId = $('#majorId').val();
-        let vi_name = $('#vi-name').val();
-        let en_name = $('#en-name').val();
-        let department = $('#department').val();
-        if(majorId === '' || vi_name === '' || en_name === '' || department ==='Choose...'){
+        let topicName = $('#topicName').val();
+        let description = $('#description').val();
+        let doTime = $('#doTime').val();
+        let maxNumberOfStudents = $('#maxNumberOfStudents').val();
+        let keyWord = $('#keyWord').val();
+        if(topicId === '' || majorId === '' || topicName === '' || description === '' || doTime ==='' || maxNumberOfStudents === '' || keyWord === '' ){
             alert('Các trường không được bỏ trống...')
         }
         else{
-            let cTime = new Date();
-            let major ={};
-            major['majorID'] = majorId;
-            major['vi_name'] = vi_name;
-            major['en_name'] = en_name;
-            major['department'] = department;
-            major['dayCreate'] = `${cTime.getDate()} / ${cTime.getMonth()+1} / ${cTime.getFullYear()}`;
+            let topic ={};
+            topic['topicId'] = topicId;
+            topic['majorID'] = majorId;
+            topic['topicName'] = topicName;
+            topic['description'] = description;
+            topic['doTime'] = doTime;
+            topic['maxNumberOfStudents'] = maxNumberOfStudents;
+            topic['keyWord'] = keyWord;
             let data = getData(storageKey);
-            let majors = [];
+            let topics = [];
             if (data){
-                majors = data;
+                topics = data;
             }
-            majors.push(major);
-            localStorage.setItem(storageKey,JSON.stringify(majors));
-            window.location.href= 'danhsachnganh.html';
+            topics.push(topic);
+            localStorage.setItem(storageKey,JSON.stringify(topics));
+            window.location.href= 'danhsachdetai.html';
         }
     })
         

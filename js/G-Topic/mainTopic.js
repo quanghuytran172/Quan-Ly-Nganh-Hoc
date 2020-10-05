@@ -1,22 +1,23 @@
-let storageKey = 'majorsData';
+let storageKey = 'topicData';
 let data = JSON.parse(localStorage.getItem(storageKey));
-let majors = [];
+let topics = [];
 if(data){
-    majors = data;
+    topics = data;
 }
 
 
-function render(majors){
+function render(topics){
     let table = document.getElementById('table-body');
-    if(majors){
-        let contentTable = majors.map(function(major,index){
+    if(topics){
+        let contentTable = topics.map(function(topic,index){
             return `<tr data-id="${index}">
-                <td>${index+1}</td>
-                <td>${major.majorID}</td>
-                <td>${major.vi_name}</td>
-                <td>${major.en_name}</td>
-                <td>${major.department}</td>
-                <td>${major.dayCreate}</td>
+                <td>${topic.topicId}</td>
+                <td>${topic.majorID}</td>
+                <td>${topic.topicName}</td>
+                <td>${topic.description}</td>
+                <td>${topic.doTime}</td>
+                <td>${topic.maxNumberOfStudents}</td>
+                <td>${topic.keyWord}</td>
                 <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs editMajor" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="far fa-edit"></span>
                 </span></button></p></td>
                 <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs deleteMajor" ><i class="far fa-trash-alt"></i></button></p></td>
@@ -25,7 +26,7 @@ function render(majors){
         table.innerHTML = contentTable.join('');
     }
 }
-render(majors);
+render(topics);
 
 $(document).ready(function(){
     "use strict";
@@ -84,7 +85,7 @@ $(document).ready(function(){
                 majors[id]['en_name'] = en_name;
                 majors[id]['department'] = department;
                 localStorage.setItem(storageKey,JSON.stringify(majors));
-                window.location.href= 'danhsachnganh.html';
+                window.location.href= 'danhsachdetai.html';
             }
         })        
     })
