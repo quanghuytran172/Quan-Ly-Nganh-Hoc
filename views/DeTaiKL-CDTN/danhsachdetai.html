@@ -99,19 +99,29 @@
             </nav>
             <h4 class="text-center mb-3">Danh sách đề tài</h4>
             
-            <div class="row mb-3">
+            <div class="row ">
               <div class="input-group md-form form-sm form-2 pl-0 col-md-5 ml-auto">
+                <div>
+                  <div class="dropdown">
+                    <a href="themdetai.html" type="button" class="btn btn-secondary mr-1 filter-button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Filter <i class="fas fa-filter"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      
+                    </div>
+                  </div>
+                  
+                </div>
                 <input class="form-control my-0 py-1 lime-border" type="text" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
                   <span class="input-group-text lime lighten-2" id="basic-text1"><i class="fas fa-search text-grey"
                       aria-hidden="true"></i></span>
                 </div>
-                <div>
-                  <a href="themdetai.html" type="button" class="btn btn-success">Thêm đề tài</a>
-                </div>
               </div>
             </div>
-           
+            <div>
+              <a href="themdetai.html" type="button" class="btn btn-success mb-3">Thêm đề tài</a>
+            </div>
             
             
             <div class="row">
@@ -143,36 +153,45 @@
         </div>
         
         <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-lg">
         <div class="modal-content">
               <div class="modal-header">
             <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fas fa-times"aria-hidden="true"></i></button>
           </div>
               <div class="modal-body">
-              <div class="form-group">
-                <input type="text" class="form-control" id="majorId">
-            </div>
-            <div class="form-group">
-            
-              <input type="text" class="form-control" id="vi-name">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="en-name" >
-            </div>
-            <div class="form-group">
-              <select id="department" class="form-control">
-                <option selected>Choose...</option>
-                <option>Toán - Tin</option>
-                <option>Kinh tế - Quản lý</option>
-                <option>Ngoại ngữ</option>
-                <option>Khoa học sức khỏe</option>
-                <option>Khoa học xã hội và nhân văn</option>
-                <option>Du lịch</option>
-                <option>Âm nhạc ứng dụng</option>
-              </select>
-            </div>
-          </div>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="topicId">Mã chủ đề</label>
+                    <input type="text" class="form-control" id="topicId">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="majorId">Mã ngành học</label>
+                    <input type="text" class="form-control" id="majorId">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="topicName">Tên đề tài</label>
+                  <input type="text" class="form-control" id="topicName">
+                </div>
+                <div class="form-group">
+                  <label for="description">Mô tả chi tiết đề tài</label>
+                  <input type="text" class="form-control" id="description">
+                </div>
+
+                <div class="form-group">
+                  <label for="doTime">Thời gian ước lượng thực hiện</label>
+                  <input type="text" class="form-control" id="doTime">
+                </div>
+                <div class="form-group">
+                  <label for="maxNumberOfStudents">Số sinh viên tối đa cùng làm</label>
+                  <input type="text" class="form-control" id="maxNumberOfStudents">
+                </div>
+                <div class="form-group">
+                  <label for="keyWord">Từ khóa</label>
+                  <input type="text" class="form-control" id="keyWord">
+                </div>
+              </div>
               <div class="modal-footer ">
             <button type="button" class="btn btn-warning btn-lg" id="updateForm" style="width: 100%;"><i class="fas fa-check"></i>
 

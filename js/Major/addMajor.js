@@ -31,7 +31,7 @@ $(document).ready(function(){
         else{
             let cTime = new Date();
             let major ={};
-            major['majorID'] = majorId;
+            major['majorId'] = majorId;
             major['vi_name'] = vi_name;
             major['en_name'] = en_name;
             major['department'] = department;

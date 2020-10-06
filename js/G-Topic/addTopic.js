@@ -34,7 +34,7 @@ $(document).ready(function(){
         else{
             let topic ={};
             topic['topicId'] = topicId;
-            topic['majorID'] = majorId;
+            topic['majorId'] = majorId;
             topic['topicName'] = topicName;
             topic['description'] = description;
             topic['doTime'] = doTime;

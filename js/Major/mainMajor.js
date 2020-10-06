@@ -12,7 +12,7 @@ function render(majors){
         let contentTable = majors.map(function(major,index){
             return `<tr data-id="${index}">
                 <td>${index+1}</td>
-                <td>${major.majorID}</td>
+                <td>${major.majorId}</td>
                 <td>${major.vi_name}</td>
                 <td>${major.en_name}</td>
                 <td>${major.department}</td>
@@ -50,7 +50,7 @@ $(document).ready(function(){
         let tr = $(this).closest('tr');
         let selectID = tr[0].children[1].textContent;
         let iArr = majors.findIndex(function(item,index){
-            return item.majorID === selectID;
+            return item.majorId === selectID;
         })
         majors.splice(iArr,1);
         localStorage.setItem(storageKey,JSON.stringify(majors));
@@ -61,7 +61,7 @@ $(document).ready(function(){
     $('.editMajor').on('click',function(e){
         
         let id = $(this).closest('tr').data('id');
-        let oldMajor = majors[id].majorID;
+        let oldMajor = majors[id].majorId;
         let oldVi = majors[id].vi_name;
         let oldEn = majors[id].en_name;
         let oldDepartment = majors[id].department;
@@ -79,7 +79,7 @@ $(document).ready(function(){
                 alert('Các trường không được bỏ trống...')
             }
             else{
-                majors[id]['majorID'] = majorId;
+                majors[id]['majorId'] = majorId;
                 majors[id]['vi_name'] = vi_name;
                 majors[id]['en_name'] = en_name;
                 majors[id]['department'] = department;
